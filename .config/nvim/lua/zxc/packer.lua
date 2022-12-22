@@ -39,6 +39,7 @@ packer.startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
+	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
@@ -48,6 +49,11 @@ packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
+	-- Comments
+	use({
+		"numToStr/Comment.nvim",
+		requires = { "JoosepAlviste/nvim-ts-context-commentstring" },
+	})
 	-- Colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
