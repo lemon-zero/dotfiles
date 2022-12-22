@@ -105,3 +105,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 export EDITOR="/usr/local/bin/nvim"
 alias dotfiles='/usr/bin/git --git-dir=/home/diegoezequiel/dotfiles/ --work-tree=/home/diegoezequiel'
+alias vim='nvim'
