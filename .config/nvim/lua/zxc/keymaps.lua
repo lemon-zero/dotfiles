@@ -22,3 +22,7 @@ keymap({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Format with LSP
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- Better Exit
+keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jj", "<ESC>", opts)
