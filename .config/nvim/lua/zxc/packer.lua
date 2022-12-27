@@ -56,6 +56,12 @@ packer.startup(function(use)
 	})
 	-- Colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "nyoom-engineering/oxocarbon.nvim" })
+	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "ellisonleao/gruvbox.nvim" })
+	use({ "lunarvim/darkplus.nvim" })
+	-- Transparence
+	use({ "xiyaowong/nvim-transparent" })
 
 	if is_bootstrap then
 		require("packer").sync()
