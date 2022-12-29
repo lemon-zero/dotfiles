@@ -1,0 +1,28 @@
+#outer-box {
+  background-color: #1e1e2e;
+  padding: 1rem;
+}
+
+#input {
+  background-color: #1e1e2e;
+  border-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+#text {
+  margin-left: 0.75rem;
+  color: #cdd6f4;
+}
+#entry {
+  background-color: #1e1e2e;
+}
+#entry:selected {
+  /* basic modern patch */
+  all: initial;
+  all: unset;
+}
+#entry:selected #text {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #f38ba8;
+}
