@@ -62,6 +62,7 @@ packer.startup(function(use)
 	use({ "lunarvim/darkplus.nvim" })
 	-- Transparence
 	use({ "xiyaowong/nvim-transparent" })
+	use({ "nvim-lualine/lualine.nvim" })
 
 	if is_bootstrap then
 		require("packer").sync()
