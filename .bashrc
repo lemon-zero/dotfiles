@@ -115,28 +115,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Config
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/go/bin/
-
-
-# Aliases
-alias dotfiles='/usr/bin/git --git-dir=/home/diegoezequiel/dotfiles/ --work-tree=/home/diegoezequiel'
-alias vim='nvim'
-
-# Check if exa is installed
-alias ls="ls -la --color=always"
-
-if command -v exa > /dev/null; 
-    then alias ls='exa -al --color=always --group-directories-first'; 
-fi
-
-
-
-
 # Bash Prompt
 # get current branch in git repo
 function parse_git_branch() {
@@ -184,5 +162,23 @@ function parse_git_dirty {
 		echo ""
 	fi
 }
-
 export PS1="\[\e[32m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\] \\$ "
+
+# Config
+. "$HOME/.cargo/env"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin/
+
+
+# Aliases
+alias dotfiles='/usr/bin/git --git-dir=/home/diegoezequiel/dotfiles/ --work-tree=/home/diegoezequiel'
+alias vim='nvim'
+# Check if exa is installed
+alias ls="ls -la --color=always"
+
+if command -v exa > /dev/null; 
+    then alias ls='exa -al --color=always --group-directories-first'; 
+fi
