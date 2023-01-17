@@ -35,20 +35,48 @@ output HDMI-A-1 resolution 1920x1080@74.973Hz position 1920,0
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+ # exec swayidle -w \
+ #          timeout 300 'swaylock -f -c 000000' \
+ #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+ #          before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+########################
+
+set $base00 #101218
+set $base01 #1f222d
+set $base02 #3b4256
+set $base03 #7780a1
+set $base04 #C0C5CE
+set $base05 #d1d4e0
+set $base06 #C9CCDB
+set $base07 #ffffff
+set $base08 #ee829f
+set $base09 #f99170
+set $base0A #ffefcc
+set $base0B #a5ffe1
+set $base0C #97e0ff
+set $base0D #97bbf7
+set $base0E #c0b7f9
+set $base0F #fcc09e
+# Widow Colours
+########################
+#                       border  background text    indicator
+client.focused          $base02 $base02    $base07 $base02
+client.focused_inactive $base02 $base02    $base03 $base0D
+client.unfocused        $base01 $base01    $base03 $base0D
+client.urgent           $base0D $base0D    $base00 $base0D
+
 
 ### Input configuration
-input type:keyboard {
-    xkb_layout us
-    xkb_variant intl
+input "type:keyboard" {
+    xkb_layout us,us
+    xkb_variant ,intl
+    xkb_options grp:alt_shift_toggle
 }
+
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -202,7 +230,7 @@ for_window [app_id="gnome-system-monitor"] floating enable, position center
 
 # Appearance 
 default_border pixel 1
-client.focused "#f38ba8ff" "#f38ba8ff" "#f38ba8ff" "#f38ba8ff"
+# client.focused "#f38ba8ff" "#f38ba8ff" "#f38ba8ff" "#f38ba8ff"
 gaps outer 2
 gaps inner 2
 #
