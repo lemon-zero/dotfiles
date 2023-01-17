@@ -1,4 +1,3 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -76,9 +75,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
+#
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -88,23 +85,31 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export PATH=$PATH:$HOME/go/bin
+export EDITOR="/usr/local/bin/nvim"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Aliases
+#
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+alias zconf="nvim ~/.zshrc"
+alias bconf="nvim ~/.bashrc"
 
-export PATH=$PATH:$HOME/go/bin
-export EDITOR="/usr/local/bin/nvim"
 alias dotfiles='/usr/bin/git --git-dir=/home/diegoezequiel/dotfiles/ --work-tree=/home/diegoezequiel'
 alias vim='nvim'
+
+# Check if exa is installed
 alias ls="ls -la --color=always"
+
+if command -v exa > /dev/null; 
+    then alias ls='exa -al --color=always --group-directories-first'; 
+fi
+
