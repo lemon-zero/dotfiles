@@ -182,3 +182,8 @@ alias ls="ls -la --color=always"
 if command -v exa > /dev/null; 
     then alias ls='exa -al --color=always --group-directories-first'; 
 fi
+
+# pnpm
+export PNPM_HOME="/home/diegoezequiel/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
