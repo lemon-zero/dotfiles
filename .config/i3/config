@@ -1,5 +1,5 @@
 set $mod Mod4
-set $menu "i3-dmenu-desktop"
+set $menu "dmenu_run -h 30"
 set $term kitty
 
 set $left h
@@ -27,7 +27,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec --no-startup-id $term
 # kill focused window
 bindsym $mod+q kill
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id $menu
 # 
 # Moving Around
     # Change focus
@@ -129,19 +129,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position top
     status_command i3status
-        colors {
-        background #1e1e2e
-        statusline #cdd6f4
-        separator #a6adc8
-
-        focused_workspace  #f5e0dc #f5e0dc #11111b
-        active_workspace   #f5e0dc #f5e0dc #11111b
-        inactive_workspace #1e1e2e #1e1e2e #cdd6f4
-        urgent_workspace   #ffffff #900000 #cdd6f4
-        binding_mode       #ffffff #900000 #cdd6f4
-    }
 }
 
 # Floating Windows
@@ -153,9 +141,9 @@ for_window [class="Pavucontrol"] floating enable, border normal
 
 
 # Appearance 
-default_border pixel 1
+default_border pixel 2
 # client.focused "#f38ba8ff" "#f38ba8ff" "#f38ba8ff" "#f38ba8ff"
-gaps outer 4
+gaps outer 2
 gaps inner 2
 
 exec --no-startup-id feh --bg-center ~/.config/sway/bgs/small-lucy.png
