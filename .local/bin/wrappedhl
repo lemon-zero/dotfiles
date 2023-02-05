@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd ~
+
+#log WLR erros and logs to the hyprland log. Recommended
+
+export HYPRLAND_LOG_WLR=1
+
+export XCURSOR_THEME=Bibata-Modern-Classic
+export XCURSOR_SIZE=24
+
+exec Hyprland
