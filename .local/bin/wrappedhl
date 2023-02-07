@@ -2,11 +2,13 @@
 
 cd ~
 
-#log WLR erros and logs to the hyprland log. Recommended
-
+# Log WLR errors and logs to the hyprland log. Recommended
 export HYPRLAND_LOG_WLR=1
 
+# Tell XWayland to use a cursor theme
 export XCURSOR_THEME=Bibata-Modern-Classic
-export XCURSOR_SIZE=24
+export GTK_THEME=adw-gtk3-dark
 
+# Set a cursor size
+export XCURSOR_SIZE=24
 exec Hyprland

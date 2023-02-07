@@ -5,7 +5,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 1);
+    background-color: rgba(0, 0, 0, 1);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -81,6 +81,7 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #custom-media,
+#custom-menu,
 #tray,
 #mode,
 #idle_inhibitor,

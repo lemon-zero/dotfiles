@@ -98,3 +98,4 @@ fi
 export PNPM_HOME="/home/diegoezequiel/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+export PATH="$HOME/.local/bin:$PATH"
