@@ -64,6 +64,9 @@ packer.startup(function(use)
 	use({ "xiyaowong/nvim-transparent" })
 	use({ "nvim-lualine/lualine.nvim" })
 
+	-- Css Colors
+	use({ "NvChad/nvim-colorizer.lua" })
+
 	if is_bootstrap then
 		require("packer").sync()
 	end

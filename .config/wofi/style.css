@@ -1,28 +1,41 @@
-#outer-box {
-  background-color: #1e1e2e;
-  padding: 1rem;
+
+window {
+  margin: 1px;
+  border: 2px solid #7aa2f7;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 18px
 }
 
 #input {
-  background-color: #1e1e2e;
-  border-color: #1e1e2e;
-  color: #cdd6f4;
+  margin: 5px;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 0px solid black;
+  background-color: #24283b;
+  color: white;
+}
+
+#inner-box {
+  margin: 5px;
+  background-color: #24283b;
+}
+
+#outer-box {
+  margin: 5px;
+  padding: 20px;
+  background-color: #24283b;
+  border-radius: 15px 15px 15px 15px;
 }
 
 #text {
-  margin-left: 0.75rem;
-  color: #cdd6f4;
+  margin: 5px;
+  color: white;
 }
-#entry {
-  background-color: #1e1e2e;
-}
+
 #entry:selected {
-  /* basic modern patch */
-  all: initial;
-  all: unset;
+  background-color: #151718;
 }
-#entry:selected #text {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #f38ba8;
+
+#text:selected {
+  text-decoration-color: white;
 }
