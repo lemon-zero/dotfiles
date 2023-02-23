@@ -27,7 +27,7 @@
         "custom/menu"
     ],
     // Modules configuration
-    // "sway/workspaces": {
+    // "wlr/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "format": "{name}: {icon}",
@@ -50,6 +50,9 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "wlr/workspaces": {
+        "on-click": "activate"
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -136,9 +139,9 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "󰛳",
+        "tooltip-format": "{ifname} via {gwaddr} 󰛳",
+        "format-linked": "{ifname} (No IP) 󰅛",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
@@ -178,7 +181,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/menu": {
-        "format": "",
+        "format": "󰐥",
         "on-click": "wlogout"
     }
 }
