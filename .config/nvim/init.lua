@@ -1,3 +1,2 @@
-require("zxc")
-require("zxc.plugins")
-require("zxc.lsp")
+require("lemon")
+require("lazy-nvim")
